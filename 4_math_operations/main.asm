@@ -33,6 +33,7 @@ multiply:
 
 
     pop ebp
+    ret
 
 
 divide:
@@ -45,6 +46,7 @@ divide:
 
     
     pop ebp
+    ret
 
 
 _start:
