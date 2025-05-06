@@ -22,7 +22,7 @@ _start:
     int 80h ; this interrupt reads into the buffer
 
     ; finish execution
-    mov eax 1
+    mov eax, 1
     mov ebx, 0
     int 80h
 
