@@ -15,9 +15,10 @@ _start:
     MOV ecx, 0 ; 2nd argument is the flags, 0 = ready only
     INT 80h
 
-    mov ebx, eax
+    mov ebx, eax ; we then move the file descriptor into ebx to perform the file read
     mov eax, 3 ; syscall number for file read
-    mov ecx, buffer
-    mov edx, 48
-    int 80h
+    mov ecx, buffer ; points buffer location to ecx
+    mov edx, 48 ; pass buffer size
+    int 80h ; this interrupt reads into the buffer
+
 
